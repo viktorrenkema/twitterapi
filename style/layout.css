@@ -1,0 +1,11 @@
+.drag-progress-bg {
+  background: #e8e8e8;
+  margin: 0rem 2rem;
+  height: 10px;
+}
+
+.drag-progress {
+  width: 0px;
+  background: white;
+  height: 10px;
+}

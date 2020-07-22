@@ -2,35 +2,13 @@ import Head from "next/head";
 import FetchData from "../components/api";
 
 export default function Home() {
+  console.warn("Chapter 3.1");
+
   return (
     <div className="container">
-      <Head>
-        <title>Twitter Moods</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
-        <h1 className="title">
-          Welcome to <a href="/">TwitterMoods</a>
-        </h1>
-
-        <p className="description">
-          Learn what moods are currently trending on Twitter
-        </p>
+        <h1 className="title"></h1>
       </main>
-      <FetchData></FetchData>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -139,3 +117,27 @@ export default function Home() {
     </div>
   );
 }
+
+// switch (count) {
+//   case count % 3 == 0:
+//     console.log("Fizz");
+//     break;
+//   case count % 5 == 0:
+//     console.log("Buzz");
+//     break;
+//   default:
+//     console.log(count);
+// }
+
+// for (let count = 0; count <= 100; count = count + 1) {
+//   switch (count) {
+//     case count % 3 == 0:
+//       console.log("Fizz");
+//       break;
+//     case count % 5 == 0:
+//       console.log("Buzz");
+//       break;
+//     default:
+//       console.log(count);
+//   }
+// }

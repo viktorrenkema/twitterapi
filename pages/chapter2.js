@@ -2,35 +2,51 @@ import Head from "next/head";
 import FetchData from "../components/api";
 
 export default function Home() {
+  console.warn("Chapter 2.1");
+  for (
+    let hashString = "#";
+    hashString.length < 8;
+    hashString = hashString + "#"
+  ) {
+    console.log(hashString);
+  }
+  console.warn("Chapter 2.2");
+  for (let count = 1; count <= 100; count = count + 1) {
+    if (count % 3 == 0 && count % 5 == 0) {
+      console.log("FizzBuzz");
+    } else if (count % 3 == 0) {
+      console.log("Fizz");
+    } else if (count % 5 == 0) {
+      console.log("Buzz");
+    } else {
+      console.log(count);
+    }
+  }
+  console.warn("Chapter 2.3");
+
+  let chessboardString = "";
+
+  function chessField(size) {
+    let totalsize = size * size + size;
+    for (let count = 0; count < totalsize; count = count + 1) {
+      if (chessboardString.length % (size + 1) == 0) {
+        chessboardString = chessboardString.concat("\n");
+      } else if (count % 2 == 0) {
+        chessboardString = chessboardString + "#";
+      } else {
+        chessboardString = chessboardString + " ";
+      }
+    }
+    console.log(chessboardString);
+  }
+
+  chessField(12);
+
   return (
     <div className="container">
-      <Head>
-        <title>Twitter Moods</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
-        <h1 className="title">
-          Welcome to <a href="/">TwitterMoods</a>
-        </h1>
-
-        <p className="description">
-          Learn what moods are currently trending on Twitter
-        </p>
+        <h1 className="title"></h1>
       </main>
-      <FetchData></FetchData>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -139,3 +155,27 @@ export default function Home() {
     </div>
   );
 }
+
+// switch (count) {
+//   case count % 3 == 0:
+//     console.log("Fizz");
+//     break;
+//   case count % 5 == 0:
+//     console.log("Buzz");
+//     break;
+//   default:
+//     console.log(count);
+// }
+
+// for (let count = 0; count <= 100; count = count + 1) {
+//   switch (count) {
+//     case count % 3 == 0:
+//       console.log("Fizz");
+//       break;
+//     case count % 5 == 0:
+//       console.log("Buzz");
+//       break;
+//     default:
+//       console.log(count);
+//   }
+// }
