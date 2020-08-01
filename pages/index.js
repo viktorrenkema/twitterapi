@@ -1,35 +1,22 @@
 import Head from "next/head";
-import FetchData from "../components/api";
+// import FetchData from "../components/twitterapi";
+import TwitterData from "../components/apiexp";
+import { GraphOne } from "../components/apiexp";
+import { users } from "../data/sample.json";
+// import GraphOne from "../components/graph-one.js";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className="container">
       <Head>
-        <title>Twitter Moods</title>
+        <title>Twitter API Stuff</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
-        <h1 className="title">
-          Welcome to <a href="/">TwitterMoods</a>
-        </h1>
+        <h1 className="title">Twitter API Stuff</h1>
 
-        <p className="description">
-          Learn what moods are currently trending on Twitter
-        </p>
+        <TwitterData></TwitterData>
       </main>
-      <FetchData></FetchData>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
 
       <style jsx>{`
         .container {

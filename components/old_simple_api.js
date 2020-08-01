@@ -8,15 +8,16 @@ export default function FetchData(props) {
   React.useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink"
       );
       const data = await response.json();
+      console.log(data);
       const [item] = data.drinks;
       setDrink(item);
     }
     fetchData();
   }, []);
-
+  console.log(drink);
   return (
     <div>
       {" "}
