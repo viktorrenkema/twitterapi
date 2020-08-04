@@ -9,3 +9,38 @@
   background: white;
   height: 10px;
 }
+
+.Outter-DataVisualizer {
+  /* padding-right: 4rem; */
+}
+
+.container {
+  background: #1d2438;
+}
+
+H1 {
+  color: #d6cfcf;
+}
+
+p,
+li {
+  color: white;
+}
+
+li {
+  list-style: none;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+ul {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
