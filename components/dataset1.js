@@ -1,5 +1,6 @@
 import * as React from "react";
 import axios from "axios";
+import Blob from "./blob";
 import { motion } from "framer-motion";
 import users from "../data/twitterjson.json";
 
@@ -58,11 +59,11 @@ export default function TwitterData1(props) {
         dataReceived={dataReceived}
         setDataReceived={setDataReceived}
       ></GraphOne>
-      <ul>
+      {/* <ul>
         {data.users.map((item) => (
           <p key={item.name}>{item.name}</p>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
@@ -91,43 +92,17 @@ function GraphOne(props) {
   console.log(singlecolor);
   return (
     <motion.div>
-      <h1>Dataset One</h1>
-      <motion.div
-        style={{
-          border: `3px solid #D6596B`,
-          width: "200px",
-          height: "200px",
-          background: "none",
-          display: "grid",
-          placeItems: "center",
-          borderRadius: 100,
-        }}
-      >
-        <motion.div
+      <Blob hits={hits}></Blob>
+      {/* <p
           style={{
-            // width: "50px",
-            // height: "50px",
-            background: mygradient,
-            borderRadius: "1000px",
-            color: "white",
-            fontSize: "24px",
-            display: "grid",
-            placeItems: "center",
-          }}
-          animate={{
-            width: `${hits * 10}px`,
-            height: `${hits * 10}px`,
-          }}
-          transition={{
-            duration: 2,
-            // type: "spring",
-            // damping: 1,
-            // mass: 0.1,
+            position: "absolute",
+            // top: "calc(50% - 200px)",
+            top: "50%",
+            left: "50%",
           }}
         >
           {hits}
-        </motion.div>
-      </motion.div>
+        </p> */}
     </motion.div>
   );
 }

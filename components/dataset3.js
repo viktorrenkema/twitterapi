@@ -3,13 +3,11 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import users from "../data/twitterjson.json";
 
-// Learn more: https://framer.com/api
-
 let mydata;
 
 let mygradient;
 
-export default function TwitterData(props) {
+export default function TwitterData3(props) {
   const [data, setData] = React.useState({ users: [] });
   const [dataReceived, setDataReceived] = React.useState(false);
 
@@ -57,11 +55,11 @@ export default function TwitterData(props) {
         dataReceived={dataReceived}
         setDataReceived={setDataReceived}
       ></GraphOne>
-      <ul>
+      {/* <ul>
         {data.users.map((item) => (
           <p key={item.name}>{item.name}</p>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
@@ -88,7 +86,6 @@ function GraphOne(props) {
   }
   return (
     <motion.div>
-      <h1>Dataset Three</h1>
       <motion.div
         style={{
           border: "3px solid #D6596B",

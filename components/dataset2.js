@@ -57,11 +57,11 @@ export default function TwitterData2(props) {
         dataReceived={dataReceived}
         setDataReceived={setDataReceived}
       ></GraphOne>
-      <ul>
+      {/* <ul>
         {data.users.map((item) => (
           <p key={item.name}>{item.name}</p>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
@@ -89,7 +89,6 @@ function GraphOne(props) {
 
   return (
     <motion.div>
-      <h1>Dataset Two</h1>
       <motion.div
         style={{
           border: "3px solid #D6596B",
